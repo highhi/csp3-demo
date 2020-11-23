@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script nonce="{{nonce}}" async src="https://www.googletagmanager.com/gtag/js?id=G-KBRJKEHLK9"></script>
+  <script nonce="{{nonce}}">
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-KBRJKEHLK9');
+  </script>
+
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body>
+  <h1>Content Security Policy Demo</h1>
+  <h2>strict-dynamic</h2>
+  <div class="container"></div>
+  <p class="no-support-csp3">ご利用のブラウザはCSP3に対応していません</p>
+
+  <script nonce="{{nonce}}">
+    (() => {
+      const el = document.createElement('script')
+      el.src = '/scripts/main.js'
+      el.defer = true
+      document.querySelector('head').appendChild(el)
+    })()
+  </script>
+</body>
+</html>
