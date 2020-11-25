@@ -15,8 +15,20 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Document</title>
+  <script
+  src="https://browser.sentry-cdn.com/5.27.6/bundle.es6.min.js"
+  integrity="sha384-FeQ6oqYGVziTFH87LEPn5vUg0vl9IRkiYxRmBiWKfm2W2Bj3RxhJzAF7j1cCGJny"
+  crossorigin="anonymous"
+  nonce="{{nonce}}"
+  ></script>
 </head>
 <body>
+  <script nonce="{{nonce}}">
+    Sentry.init({
+    dsn: "https://f0d6135a39004f78b7385c59f4fa1f21@o481942.ingest.sentry.io/5531397",
+    tracesSampleRate: 1.0,
+  });
+  </script>
   <h1>Content Security Policy Demo</h1>
   <h2>strict-dynamic</h2>
   <div class="container"></div>
