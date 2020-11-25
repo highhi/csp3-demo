@@ -21,7 +21,8 @@ const getNonceAndPolicies = () => {
     'object-src none',
     `base-uri none`,
     `script-src 'nonce-${nonce}' 'strict-dynamic'`,
-    `child-src www.youtube.com`
+    `child-src www.youtube.com`,
+    'report-uri https://o481942.ingest.sentry.io/api/5531397/security/?sentry_key=f0d6135a39004f78b7385c59f4fa1f21'
   ]
 
   return [
